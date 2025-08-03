@@ -41,6 +41,7 @@ public class UserController {
 
 
 
+
     @GetMapping("/allUser")
     public String getAllUser(@RequestBody Users users) {
         boolean ans = userService.addUser(users);
@@ -49,4 +50,14 @@ public class UserController {
         }
         return "Users not found";
     }
+
+    @GetMapping("/veiwUser")
+    public String viewUser(@RequestBody Users users) {
+        boolean ans = userService.addUser(users);
+        if (ans) {
+            return "User";
+        }
+        return "User not found";
+    }
+
 }
