@@ -3,10 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.entity.Users;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.http.HttpResponse;
 
@@ -25,7 +22,7 @@ public class UserController {
         return "User not added";
     }
 
-    @GetMapping("/displayUser")
+    @DeleteMapping("/displayUser")
     public String displayUser(@RequestBody Users users){
         boolean ans= userService.addUser(users);
         if(ans){return "User added"; }
