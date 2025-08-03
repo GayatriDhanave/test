@@ -39,4 +39,13 @@ public class UserController {
         return "User not updated";
     }
 
+    @GetMapping("/veiwUser")
+    public String viewUser(@RequestBody Users users) {
+        boolean ans = userService.addUser(users);
+        if (ans) {
+            return "User";
+        }
+        return "User not found";
+    }
+
 }
