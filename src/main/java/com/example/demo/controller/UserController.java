@@ -19,13 +19,9 @@ public class UserController {
     public String saveUser(@RequestBody Users users){
         boolean ans= userService.addUser(users);
         if(ans){return "User added"; }
+        System.out.println("This is main branch")
         return "User not added";
     }
 
-    @DeleteMapping("/displayUser")
-    public String displayUser(@RequestBody Users users){
-        boolean ans= userService.addUser(users);
-        if(ans){return "User added"; }
-        return "User not added";
-    }
+
 }
