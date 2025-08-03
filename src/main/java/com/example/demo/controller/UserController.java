@@ -39,4 +39,14 @@ public class UserController {
         return "User not updated";
     }
 
+
+
+    @GetMapping("/allUser")
+    public String getAllUser(@RequestBody Users users) {
+        boolean ans = userService.addUser(users);
+        if (ans) {
+            return "User ";
+        }
+        return "Users not found";
+    }
 }
