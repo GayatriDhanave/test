@@ -22,12 +22,21 @@ public class UserController {
 
     }
 
-    @PutMapping("/updateUser")
+    @PutMapping ("/updateUser")
     public String updateUser(@RequestBody Users users){
         boolean ans= userService.addUser(users);
-        if(ans){return "User updated"; }
-        return "User not updated";
+        if(ans){return "User deleted"; }
+        return "User not deleted";
+
     }
 
+    @DeleteMapping("/deleteUser")
+    public String deleteUser(@RequestBody Users users) {
+        boolean ans = userService.addUser(users);
+        if (ans) {
+            return "User updated";
+        }
+        return "User not updated";
+    }
 
 }
