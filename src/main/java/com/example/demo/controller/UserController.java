@@ -18,7 +18,7 @@ public class UserController {
     public String saveUser(@RequestBody Users users){
         boolean ans= userService.addUser(users);
         if(ans){return "User added"; }
-        System.out.println("This is feature1 branch");
+        System.out.print("This is feature1 branch");
         return "User not added";
     }
 
