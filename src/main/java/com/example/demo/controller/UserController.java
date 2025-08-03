@@ -27,7 +27,6 @@ public class UserController {
         boolean ans= userService.addUser(users);
         if(ans){return "User updated"; }
         return "User not updated";
-
     }
 
 
