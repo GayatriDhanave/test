@@ -28,4 +28,26 @@ public class UserController {
         if(ans){return "User added"; }
         return "User not added";
     }
+<<<<<<< HEAD
+=======
+
+    @DeleteMapping("/deleteUser")
+    public String deleteUser(@RequestBody Users users) {
+        boolean ans = userService.addUser(users);
+        if (ans) {
+            return "User updated";
+        }
+        return "User not updated";
+    }
+
+    @GetMapping("/veiwUser")
+    public String viewUser(@RequestBody Users users) {
+        boolean ans = userService.addUser(users);
+        if (ans) {
+            return "User";
+        }
+        return "User not found";
+    }
+
+>>>>>>> 76882d0249e0a4f9eec531bafcdde9d5ed8b8d63
 }
