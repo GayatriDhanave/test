@@ -42,7 +42,6 @@ public class UserController {
     @GetMapping("/veiwUser")
     public String viewUser(@RequestBody Users users) {
         boolean ans = userService.addUser(users);
-        System.out.println("Main");
         if (ans) {
             return "User";
         }
