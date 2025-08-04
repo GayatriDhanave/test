@@ -42,8 +42,9 @@ public class UserController {
     @GetMapping("/veiwUser")
     public String viewUser(@RequestBody Users users) {
         boolean ans = userService.addUser(users);
-        
+
         if (ans) {
+            int a=10;
             return "User";
         }
         return "User not found";
